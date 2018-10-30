@@ -1,14 +1,33 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Media;
 
 namespace Grasp
 {
+    public enum WindowDockPosition
+    {
+        Undocked,
+        Left,
+        Right,
+    }
+
     public class WindowResizer
     {
         #region Private Members
         private Window mWindow;
+
+        private Rect mScreenSize = new Rect();
+
+        private int mEdgeTolerance = 2;
+
+        private Matrix mTransformToDevice;
+
+        private IntPtr mLastScreen;
+
+        private WindowDockPosition mLastDock = WindowDockPosition.Undocked;
         #endregion
 
         #region Dll Imports
@@ -23,16 +42,36 @@ namespace Grasp
         static extern IntPtr MonitorFromPoint(POINT pt, MonitorOptions dwFlags);
         #endregion
 
+        #region Public Events
+        public event Action<WindowDockPosition> WindowDockChanged = (dock) => { };
+        #endregion
+
         #region Constructor
         public WindowResizer(Window window)
         {
             mWindow = window;
 
+            GetTransform();
+
             mWindow.SourceInitialized += Window_SourceInitialized;
+
+            mWindow.SizeChanged += Window_SizeChanged;
         }
         #endregion
 
         #region Initialize
+        private void GetTransform()
+        {
+            var source = PresentationSource.FromVisual(mWindow);
+
+            mTransformToDevice = default(Matrix);
+
+            if (source == null)
+                return;
+
+            mTransformToDevice = source.CompositionTarget.TransformToDevice;
+        }
+
         private void Window_SourceInitialized(object sender, System.EventArgs e)
         {
             var handle = (new WindowInteropHelper(mWindow)).Handle;
@@ -45,16 +84,54 @@ namespace Grasp
         }
         #endregion
 
+        #region Edge Docking
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (mTransformToDevice == default(Matrix))
+                return;
+
+            var size = e.NewSize;
+
+            var top = mWindow.Top;
+            var left = mWindow.Left;
+            var bottom = top + size.Height;
+            var right = left + mWindow.Width;
+
+            var windowTopLeft = mTransformToDevice.Transform(new Point(left, top));
+            var windowBottomRight = mTransformToDevice.Transform(new Point(right, bottom));
+
+            var edgedTop = windowTopLeft.Y <= (mScreenSize.Top + mEdgeTolerance);
+            var edgedLeft = windowTopLeft.X <= (mScreenSize.Left + mEdgeTolerance);
+            var edgedBottom = windowBottomRight.Y >= (mScreenSize.Bottom - mEdgeTolerance);
+            var edgedRight = windowBottomRight.X >= (mScreenSize.Right - mEdgeTolerance);
+
+            var dock = WindowDockPosition.Undocked;
+
+            if (edgedTop && edgedBottom && edgedLeft)
+                dock = WindowDockPosition.Left;
+            else if (edgedTop && edgedBottom && edgedRight)
+                dock = WindowDockPosition.Right;
+            else
+                dock = WindowDockPosition.Undocked;
+
+            if (dock != mLastDock)
+                WindowDockChanged(dock);
+
+            mLastDock = dock;
+        }
+        #endregion
+
         #region Windows Proc
         private IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             switch (msg)
             {
-                case 0x0024:
+                case 0x0024:/* WM_GETMINMAXINFO */
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
             }
+
             return (IntPtr)0;
         }
         #endregion
@@ -64,16 +141,20 @@ namespace Grasp
             POINT lMousePosition;
             GetCursorPos(out lMousePosition);
 
-            IntPtr lPrimaryScreen = MonitorFromPoint(new POINT(0, 0), MonitorOptions.MONITOR_DEFAULTTOPRIMARY);
-            MONITORINFO lPrimaryScreenInfo = new MONITORINFO();
+            var lPrimaryScreen = MonitorFromPoint(new POINT(0, 0), MonitorOptions.MONITOR_DEFAULTTOPRIMARY);
+
+            var lPrimaryScreenInfo = new MONITORINFO();
             if (GetMonitorInfo(lPrimaryScreen, lPrimaryScreenInfo) == false)
-            {
                 return;
-            }
 
-            IntPtr lCurrentScreen = MonitorFromPoint(lMousePosition, MonitorOptions.MONITOR_DEFAULTTONEAREST);
+            var lCurrentScreen = MonitorFromPoint(lMousePosition, MonitorOptions.MONITOR_DEFAULTTONEAREST);
 
-            MINMAXINFO lMmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+            if (lCurrentScreen != mLastScreen || mTransformToDevice == default(Matrix))
+                GetTransform();
+
+            mLastScreen = lCurrentScreen;
+
+            var lMmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
 
             if (lPrimaryScreen.Equals(lCurrentScreen) == true)
             {
@@ -89,6 +170,13 @@ namespace Grasp
                 lMmi.ptMaxSize.X = lPrimaryScreenInfo.rcMonitor.Right - lPrimaryScreenInfo.rcMonitor.Left;
                 lMmi.ptMaxSize.Y = lPrimaryScreenInfo.rcMonitor.Bottom - lPrimaryScreenInfo.rcMonitor.Top;
             }
+
+            var minSize = mTransformToDevice.Transform(new Point(mWindow.MinWidth, mWindow.MinHeight));
+
+            lMmi.ptMinTrackSize.X = (int)minSize.X;
+            lMmi.ptMinTrackSize.Y = (int)minSize.Y;
+
+            mScreenSize = new Rect(lMmi.ptMaxPosition.X, lMmi.ptMaxPosition.Y, lMmi.ptMaxSize.X, lMmi.ptMaxSize.Y);
 
             Marshal.StructureToPtr(lMmi, lParam, true);
         }
@@ -139,9 +227,9 @@ namespace Grasp
     public struct POINT
     {
         public int X;
-       
+
         public int Y;
-       
+
         public POINT(int x, int y)
         {
             this.X = x;

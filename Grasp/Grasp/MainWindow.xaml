@@ -9,7 +9,9 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         x:Name="AppWindow"
-        Title="Grasp IDE 2019" Height="600" Width="900">
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        Title="Grasp IDE 2019" Width="1280" Height="768">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -31,7 +33,7 @@
                                         <!-- Titlebar Definition -->
                                         <RowDefinition Height="{Binding TitlebarHeightGridLength, FallbackValue=30}"/>
                                         <!-- Topbar Definition -->
-                                        <RowDefinition Height="{Binding TopbarHeightGridLength, FallbackValue=40}"/>
+                                        <RowDefinition Height="{Binding TopbarHeightGridLength, FallbackValue=35}"/>
                                         <!-- Separator Definition -->
                                         <RowDefinition Height="{Binding SeparatorHeightGridLength, FallbackValue=1}"/>
                                         <!-- Toolbar Definition -->
@@ -50,7 +52,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <!-- Icon -->
-                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                        <Button Style="{StaticResource SystemIconButton}">
                                             <Image Source="/Resources/Images/Logo/logo.png"/>
                                         </Button>
                                         <!-- Title -->
@@ -59,9 +61,18 @@
                                         </Grid>
                                         <!-- Window Buttons -->
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_"/>
-                                            <Button Command="{Binding RestoreCommand}" Style="{StaticResource WindowControlButton}" Content="[ ]"/>
-                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowControlButton}" Content="X"/>
+                                            <!-- Minimize -->
+                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}">
+                                                <Image Source="/Resources/Images/Buttons/WindowButton-minimize.png"/>
+                                            </Button>
+                                            <!-- Restore -->
+                                            <Button Command="{Binding RestoreCommand}" Style="{StaticResource WindowControlButton}">
+                                                <Image Source="/Resources/Images/Buttons/WindowButton-restore.png"/>
+                                            </Button>
+                                            <!-- Close -->
+                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}">
+                                                <Image Source="/Resources/Images/Buttons/WindowButton-close.png"/>
+                                            </Button>
                                         </StackPanel>
                                     </Grid>
                                     <!-- Topbar -->
