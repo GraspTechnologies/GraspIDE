@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Grasp">
+
+    <Color x:Key="WhiteColor">#ffffff</Color>
+    <Color x:Key="BackgroundColor">#252831</Color>
+    <Color x:Key="ForegroundColor">#31343f</Color>
+    <Color x:Key="HoverColor">#272a32</Color>
+    <Color x:Key="UnavailableTextColor">#909090</Color>
+
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource WhiteColor}"/>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}"/>
+    <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}"/>
+    <SolidColorBrush x:Key="UnavailableTextBrush" Color="{StaticResource UnavailableTextColor}"/>
+
+</ResourceDictionary>

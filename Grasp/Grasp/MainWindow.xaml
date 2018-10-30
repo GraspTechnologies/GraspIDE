@@ -1,0 +1,94 @@
+﻿<Window x:Class="Grasp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grasp"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        x:Name="AppWindow"
+        Title="Grasp IDE 2019" Height="600" Width="900">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border & dropshadow margin -->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+                            <Grid>
+                                <!-- Window border & dropshadow -->
+                                <Border Background="{StaticResource BackgroundBrush}">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                                <!-- Main window content -->
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <!-- Titlebar Definition -->
+                                        <RowDefinition Height="{Binding TitlebarHeightGridLength, FallbackValue=30}"/>
+                                        <!-- Topbar Definition -->
+                                        <RowDefinition Height="{Binding TopbarHeightGridLength, FallbackValue=40}"/>
+                                        <!-- Separator Definition -->
+                                        <RowDefinition Height="{Binding SeparatorHeightGridLength, FallbackValue=1}"/>
+                                        <!-- Toolbar Definition -->
+                                        <RowDefinition Height="{Binding ToolbarHeightGridLength, FallbackValue=40}"/>
+                                        <!-- Window Content Definition -->
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <!-- Titlebar -->
+                                    <Grid Background="{StaticResource ForegroundBrush}" Grid.Row="0" Panel.ZIndex="1">
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Icon Definition -->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- Title Definition -->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- Window Buttons Definition -->
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <!-- Icon -->
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                            <Image Source="/Resources/Images/Logo/logo.png"/>
+                                        </Button>
+                                        <!-- Title -->
+                                        <Grid Grid.Column="1">
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"/>
+                                        </Grid>
+                                        <!-- Window Buttons -->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_"/>
+                                            <Button Command="{Binding RestoreCommand}" Style="{StaticResource WindowControlButton}" Content="[ ]"/>
+                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowControlButton}" Content="X"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <!-- Topbar -->
+                                    <Grid Background="{StaticResource ForegroundBrush}" Grid.Row="1" Panel.ZIndex="1">
+                                        <TextBlock Style="{StaticResource HeaderText}" HorizontalAlignment="Left" Margin="10" Foreground="{StaticResource WhiteBrush}" 
+                                                   Text="File       Edit       View       Project       Build       Debug       Team       Tools       Test       Analyze       Window       Help"/>
+                                    </Grid>
+                                    <!-- Toolbar -->
+                                    <Grid Background="{StaticResource ForegroundBrush}" Grid.Row="3" Panel.ZIndex="1">
+
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TitlebarHeight}"
+            GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+    </Grid>
+</Window>
