@@ -126,7 +126,7 @@ namespace Grasp
         {
             switch (msg)
             {
-                case 0x0024:/* WM_GETMINMAXINFO */
+                case 0x0024:
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
