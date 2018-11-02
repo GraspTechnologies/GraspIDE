@@ -67,7 +67,7 @@
                                             </Button>
                                             <!-- Restore -->
                                             <Button Style="{StaticResource WindowControlButton}" Command="{Binding RestoreCommand}">
-                                                <Image Source="/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png"/>
+                                                <Image Source="{Binding RestoreButtonMode}"/>
                                             </Button>
                                             <!-- Close -->
                                             <Button Style="{StaticResource WindowCloseButton}" Command="{Binding CloseCommand}">

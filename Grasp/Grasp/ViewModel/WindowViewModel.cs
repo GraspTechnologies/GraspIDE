@@ -10,6 +10,8 @@ namespace Grasp
 
         private int mOuterMarginSize = 10;
 
+        private string mRestoreButtonMode;
+
         private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
         #endregion
 
@@ -30,8 +32,6 @@ namespace Grasp
 
         public int ToolbarHeight { get; set; } = 40;
 
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
-
         public int OuterMarginSize
         {
             get
@@ -43,6 +43,21 @@ namespace Grasp
                 mOuterMarginSize = value;
             }
         }
+
+        public string RestoreButtonMode
+        {
+            get
+            {
+                return mWindow.WindowState == WindowState.Maximized ? mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png" 
+                    : mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore_fullscreen.png";
+            }
+            set
+            {
+                mRestoreButtonMode = value;
+            }
+        }
+
+        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 
@@ -61,7 +76,6 @@ namespace Grasp
         public ICommand RestoreCommand { get; set; }
 
         public ICommand CloseCommand { get; set; }
-
         #endregion
 
         #region Constructor
@@ -95,6 +109,7 @@ namespace Grasp
             OnPropertyChanged(nameof(ResizeBorderThickness));
             OnPropertyChanged(nameof(OuterMarginSize));
             OnPropertyChanged(nameof(OuterMarginSizeThickness));
+            OnPropertyChanged(nameof(RestoreButtonMode));
         }
         #endregion
     }
