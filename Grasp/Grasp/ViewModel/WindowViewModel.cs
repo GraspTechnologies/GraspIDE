@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Grasp
@@ -87,9 +88,13 @@ namespace Grasp
             {
                 WindowResized();
             };
-            MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);
-            RestoreCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
-            CloseCommand = new RelayCommand(() => mWindow.Close());
+
+            Task.Run(() =>
+            {
+                MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);
+                RestoreCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
+                CloseCommand = new RelayCommand(() => mWindow.Close());
+            }).Wait();
 
             var resizer = new WindowResizer(mWindow);
 
