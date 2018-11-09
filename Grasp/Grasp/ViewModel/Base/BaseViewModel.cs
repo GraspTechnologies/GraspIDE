@@ -11,6 +11,6 @@ namespace Grasp
         public void OnPropertyChanged(string name)
         {
             PropertyChanged(this, new PropertyChangedEventArgs(name));
-;       }
+        }
     }
 }

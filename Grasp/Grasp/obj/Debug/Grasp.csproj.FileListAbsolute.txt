@@ -28,3 +28,4 @@ C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\S
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\EditorControl.baml
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\ErrorListControl.baml
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\SolutionsControl.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Grasp.csprojAssemblyReference.cache
