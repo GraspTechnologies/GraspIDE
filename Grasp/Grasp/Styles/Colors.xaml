@@ -8,6 +8,7 @@
     <Color x:Key="BlueColor">#007acc</Color>
     <Color x:Key="HoverColor">#464953</Color>
     <Color x:Key="UnavailableTextColor">#909090</Color>
+    <Color x:Key="UnselectedScreenColor">#3f414c</Color>
 
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
     <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}"/>
@@ -15,5 +16,6 @@
     <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource BlueColor}"/>
     <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}"/>
     <SolidColorBrush x:Key="UnavailableTextBrush" Color="{StaticResource UnavailableTextColor}"/>
+    <SolidColorBrush x:Key="UnselectedScreenBrush" Color="{StaticResource UnselectedScreenColor}"/>
 
 </ResourceDictionary>

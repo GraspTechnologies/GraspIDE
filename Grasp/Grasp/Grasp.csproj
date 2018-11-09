@@ -68,10 +68,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\Editor\EditorControl.xaml.cs">
+      <DependentUpon>EditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\ErrorListControl.xaml.cs">
+      <DependentUpon>ErrorListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\SolutionsControl.xaml.cs">
+      <DependentUpon>SolutionsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
+    <Page Include="Controls\Editor\EditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Editor\ErrorListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Editor\SolutionsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,6 +174,8 @@
     <Resource Include="Resources\Images\Buttons\Window Buttons\WindowButton-restore_fullscreen.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\Error List\" />
+    <Folder Include="Controls\Solutions\" />
     <Folder Include="Resources\Images\Buttons\Toolbar Buttons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

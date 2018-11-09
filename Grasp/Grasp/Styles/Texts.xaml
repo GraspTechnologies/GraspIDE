@@ -9,4 +9,8 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}" x:Key="ScreenTitleText" BasedOn="{StaticResource HeaderText}">
+        <Setter Property="Margin" Value="10 0 10 0"/>
+    </Style>
+
 </ResourceDictionary>

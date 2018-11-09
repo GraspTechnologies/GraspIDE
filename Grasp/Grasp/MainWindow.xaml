@@ -120,6 +120,36 @@
                                       
                                         </StackPanel>
                                     </Grid>
+                                    <!-- Content (Solutions, Editor, Error List) -->
+                                    <Grid Grid.Row="4">
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Solutions Definition -->
+                                            <ColumnDefinition Width="300"/>
+                                            <!-- Editor & Error List Definition -->
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <!-- Solutions -->
+                                        <local:SolutionsControl Margin="0 10 0 0">
+
+                                        </local:SolutionsControl>
+                                        <!-- Editor & Error List -->
+                                        <Grid Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <!-- Editor Definition -->
+                                                <RowDefinition Height="*"/>
+                                                <!-- Error List Definition -->
+                                                <RowDefinition Height="200"/>
+                                            </Grid.RowDefinitions>
+                                            <!-- Editor -->
+                                            <local:EditorControl Grid.Row="0" Margin="10 40 0 0">
+
+                                            </local:EditorControl>
+                                            <!-- Error List -->
+                                            <local:ErrorListControl Grid.Row="1" Margin="10 10 0 0">
+
+                                            </local:ErrorListControl>
+                                        </Grid>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -135,7 +165,5 @@
             CaptionHeight="{Binding TitlebarHeight}"
             GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
-
-    <Grid>
-    </Grid>
+    
 </Window>
