@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\App.xaml
-9-1249585448
+91010260534
 
-12-1021289174
+12531826930
 15-58410661
-Controls\Editor\EditorControl.xaml;Controls\Editor\ErrorListControl.xaml;Controls\Editor\SolutionsControl.xaml;MainWindow.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+Controls\Editor\EditorControl.xaml;Controls\Error List\ErrorListControl.xaml;Controls\Solutions\SolutionsControl.xaml;MainWindow.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
 False
 
