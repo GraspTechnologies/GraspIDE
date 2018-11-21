@@ -24,7 +24,6 @@ C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Styles\Fonts.baml
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\EditorControl.g.cs
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Editor\EditorControl.baml
-C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Grasp.csprojAssemblyReference.cache
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Error List\ErrorListControl.g.cs
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Solutions\SolutionsControl.g.cs
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Error List\ErrorListControl.baml

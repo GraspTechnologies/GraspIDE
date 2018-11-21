@@ -32,13 +32,7 @@
                                     <Grid.RowDefinitions>
                                         <!-- Titlebar Definition -->
                                         <RowDefinition Height="{Binding TitlebarHeightGridLength, FallbackValue=30}"/>
-                                        <!-- Topbar Definition -->
-                                        <RowDefinition Height="{Binding TopbarHeightGridLength, FallbackValue=30}"/>
-                                        <!-- Separator Definition -->
-                                        <RowDefinition Height="{Binding SeparatorHeightGridLength, FallbackValue=1}"/>
-                                        <!-- Toolbar Definition -->
-                                        <RowDefinition Height="{Binding ToolbarHeightGridLength, FallbackValue=40}"/>
-                                        <!-- Window Content Definition -->
+                                        <!-- Topbar, Separator, Toolbar & Window Content Definitions -->
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <!-- Titlebar -->
@@ -52,9 +46,9 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <!-- Icon -->
-                                        <Button Style="{StaticResource SystemIconButton}">
-                                            <Image Source="/Resources/Images/Logo/logo.png"/>
-                                        </Button>
+                                        <Grid Grid.Column="0">
+                                            <Image Source="/Resources/Images/Logo/logo.png" RenderOptions.BitmapScalingMode="Fant" Margin="5"/>
+                                        </Grid>
                                         <!-- Title -->
                                         <Grid Grid.Column="1">
                                             <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"/>
@@ -75,79 +69,113 @@
                                             </Button>
                                         </StackPanel>
                                     </Grid>
-                                    <!-- Topbar -->
-                                    <Grid Grid.Row="1" Background="{StaticResource ForegroundBrush}" Panel.ZIndex="1">
-                                        <Grid.ColumnDefinitions>
-                                            <!-- Topbar Buttons Definition -->
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <StackPanel Grid.Column="0" Orientation="Horizontal">
-                                            <!-- File -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="File"/>
-                                            <!-- Edit -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Edit"/>
-                                            <!-- View -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="View"/>
-                                            <!-- Project -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Project"/>
-                                            <!-- Build -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Build"/>
-                                            <!-- Debug -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Debug"/>
-                                            <!-- Test -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Task"/>
-                                            <!-- Team -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Team"/>
-                                            <!-- Tools -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Tools"/>
-                                            <!-- Test -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Test"/>
-                                            <!-- Analyze -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Analyze"/>
-                                            <!-- Window -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Window"/>
-                                            <!-- Help -->
-                                            <Button Style="{StaticResource TopbarButton}" Content="Help"/>
-                                        </StackPanel>
-                                    </Grid>
-                                    <!-- Toolbar -->
-                                    <Grid Grid.Row="3" Background="{StaticResource ForegroundBrush}" Panel.ZIndex="1">
-                                        <Grid.ColumnDefinitions>
-                                            <!-- Toolbar Buttons Definition -->
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <StackPanel Grid.Column="0" Orientation="Horizontal">
-                                      
-                                        </StackPanel>
-                                    </Grid>
-                                    <!-- Content (Solutions, Editor, Error List) -->
-                                    <Grid Grid.Row="4">
-                                        <Grid.ColumnDefinitions>
-                                            <!-- Solutions Definition -->
-                                            <ColumnDefinition Width="300"/>
-                                            <!-- Editor & Error List Definition -->
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <!-- Solutions -->
-                                        <local:SolutionsControl Margin="0 10 0 0">
+                                    <!-- Topbar, Separator, Toolbar & Window Content -->
+                                    <Grid Grid.Row="1" Background="{StaticResource BackgroundBrush}">
+                                        <Grid.RowDefinitions>
+                                            <!-- Topbar Definition -->
+                                            <RowDefinition Height="{Binding TopbarHeightGridLength, FallbackValue=30}"/>
+                                            <!-- Separator Definition -->
+                                            <RowDefinition Height="{Binding SeparatorHeightGridLength, FallbackValue=1}"/>
+                                            <!-- Toolbar Definition -->
+                                            <RowDefinition Height="{Binding ToolbarHeightGridLength, FallbackValue=40}"/>
+                                            <!-- Window Content Definition -->
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <!-- Topbar -->
+                                        <Grid Grid.Row="0" Background="{StaticResource ForegroundBrush}" Panel.ZIndex="1">
+                                            <Grid.ColumnDefinitions>
+                                                <!-- Topbar Buttons Definition -->
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <!-- Topbar Buttons -->
+                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}">
+                                                <!-- File -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="File">
+                                                    <MenuItem Header="New" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Open" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Close" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save All" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Recent Files" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Recent Projects and Solutions" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4" Icon="/Resources/Images/Logo/logo.png"/>
+                                                </MenuItem>
+                                                <!-- Edit -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Edit"/>
+                                                <!-- View -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="View"/>
+                                                <!-- Project -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Project"/>
+                                                <!-- Build -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Build"/>
+                                                <!-- Debug -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Debug"/>
+                                                <!-- Task -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Task"/>
+                                                <!-- Team -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Team"/>
+                                                <!-- Tools -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Tools"/>
+                                                <!-- Test -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Test"/>
+                                                <!-- Analyze -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Analyze"/>
+                                                <!-- Window -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Window"/>
+                                                <!-- Help -->
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Help"/>
+                                            </Menu>
+                                        </Grid>
+                                        <!-- Toolbar -->
+                                        <Grid Grid.Row="2" Background="{StaticResource ForegroundBrush}" Panel.ZIndex="1">
+                                            <Grid.ColumnDefinitions>
+                                                <!-- Toolbar Buttons Definition -->
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <!-- Toolbar Buttons -->
+                                            <StackPanel Grid.Column="0" Orientation="Horizontal">
 
-                                        </local:SolutionsControl>
-                                        <!-- Editor & Error List -->
-                                        <Grid Grid.Column="1">
-                                            <Grid.RowDefinitions>
-                                                <!-- Editor Definition -->
-                                                <RowDefinition Height="*"/>
-                                                <!-- Error List Definition -->
-                                                <RowDefinition Height="200"/>
-                                            </Grid.RowDefinitions>
-                                            <!-- Editor -->
-                                            <local:EditorControl Grid.Row="0" Margin="10 40 0 0">
+                                            </StackPanel>
+                                        </Grid>
+                                        <!-- Window Content (Solutions, Editor, Error List) -->
+                                        <Grid Grid.Row="3" Panel.ZIndex="1">
+                                            <Grid.ColumnDefinitions>
+                                                <!-- Solutions Definition -->
+                                                <ColumnDefinition Width="300"/>
+                                                <!-- Editor & Error List Definition -->
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <!-- Solutions -->
+                                            <local:SolutionsControl Grid.Column="0" Margin="0 10 0 0">
 
-                                            </local:EditorControl>
-                                            <!-- Error List -->
-                                            <local:ErrorListControl Grid.Row="1" Margin="10 10 0 0">
+                                            </local:SolutionsControl>
+                                            <!-- Editor & Error List -->
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <!-- Editor Definition -->
+                                                    <RowDefinition Height="*"/>
+                                                    <!-- Error List Definition -->
+                                                    <RowDefinition Height="250"/>
+                                                </Grid.RowDefinitions>
+                                                <!-- Editor -->
+                                                <local:EditorControl Grid.Row="0" Margin="10 40 0 0">
 
-                                            </local:ErrorListControl>
+                                                </local:EditorControl>
+                                                <!-- Error List -->
+                                                <local:ErrorListControl Grid.Row="1" Margin="10 10 0 0">
+
+                                                </local:ErrorListControl>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -165,5 +193,5 @@
             CaptionHeight="{Binding TitlebarHeight}"
             GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
-    
+
 </Window>

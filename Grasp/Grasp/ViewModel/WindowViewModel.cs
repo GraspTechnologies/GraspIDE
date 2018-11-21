@@ -3,15 +3,29 @@ using System.Windows.Input;
 
 namespace Grasp
 {
+    /// <summary>
+    /// The ViewModel for the AppWindow
+    /// </summary>
     public class WindowViewModel : BaseViewModel
     {
         #region Private Members
+        /// <summary>
+        /// The Window this ViewModel controls
+        /// </summary>
         private Window mWindow;
+
+        /// <summary>
+        /// The window resizer helper that keeps the window size correct in various states
+        /// </summary>
+        private WindowResizer mWindowResizer;
 
         private int mOuterMarginSize = 10;
 
         private string mRestoreButtonMode;
 
+        /// <summary>
+        /// The last known dock position
+        /// </summary>
         private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
         #endregion
 
@@ -20,7 +34,10 @@ namespace Grasp
 
         public int WindowMinimumHeight { get; set; } = 768;
 
-        public bool Borderless { get { return (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked); } }
+        /// <summary>
+        /// The Window is borderless when it is maximized or when it is docked
+        /// </summary>
+        public bool Borderless => mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked;
 
         public int ResizeBorder { get; set; } = 0;
 
@@ -32,42 +49,36 @@ namespace Grasp
 
         public int ToolbarHeight { get; set; } = 40;
 
+        /// <summary>
+        /// The margin around the window which allows for a drop shadow
+        /// </summary>
         public int OuterMarginSize
         {
-            get
-            {
-                return mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize;
-            }
-            set
-            {
-                mOuterMarginSize = value;
-            }
+            get => mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize;
+            set => mOuterMarginSize = value;
         }
 
+        /// <summary>
+        /// The RestoreButton's mode according to the window's state
+        /// </summary>
         public string RestoreButtonMode
         {
-            get
-            {
-                return mWindow.WindowState == WindowState.Maximized ? mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png" 
+            get => mWindow.WindowState == WindowState.Maximized ? mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png"
                     : mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore_fullscreen.png";
-            }
-            set
-            {
-                mRestoreButtonMode = value;
-            }
+            set => mRestoreButtonMode = value;
         }
 
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
+        public Thickness ResizeBorderThickness => new Thickness(ResizeBorder + OuterMarginSize);
 
-        public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
+        public Thickness OuterMarginSizeThickness => new Thickness(OuterMarginSize);
 
-        public GridLength SeparatorHeightGridLength { get { return new GridLength(SeparatorHeight); } }
+        public GridLength SeparatorHeightGridLength => new GridLength(SeparatorHeight);
 
-        public GridLength TitlebarHeightGridLength { get { return new GridLength(TitlebarHeight + ResizeBorder); } }
+        public GridLength TitlebarHeightGridLength => new GridLength(TitlebarHeight + ResizeBorder);
 
-        public GridLength TopbarHeightGridLength { get { return new GridLength(TopbarHeight); } }
+        public GridLength TopbarHeightGridLength => new GridLength(TopbarHeight);
 
-        public GridLength ToolbarHeightGridLength { get { return new GridLength(ToolbarHeight); } }
+        public GridLength ToolbarHeightGridLength => new GridLength(ToolbarHeight);
         #endregion
 
         #region Commands
@@ -79,32 +90,48 @@ namespace Grasp
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public WindowViewModel(Window window)
         {
             mWindow = window;
 
+            // Listen out for the window being resized
             mWindow.StateChanged += (sender, e) =>
             {
+                // Fire off events for all properties which are affected by a resize
                 WindowResized();
             };
+
+            // Create commands
             MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);
             RestoreCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
 
-            var resizer = new WindowResizer(mWindow);
+            // Fix window resize issue
+            mWindowResizer = new WindowResizer(mWindow);
 
-            resizer.WindowDockChanged += (dock) =>
+            // Listen out for dock changes
+            mWindowResizer.WindowDockChanged += (dock) =>
             {
+                // Store last position
                 mDockPosition = dock;
 
+                // Fire off resize events
                 WindowResized();
             };
         }
         #endregion
 
         #region Private Helpers
+        /// <summary>
+        /// If the window resizes to a specific position (docked or maximized)
+        /// this will update all required property change events to set the values
+        /// </summary>
         private void WindowResized()
         {
+            // Fire off events for all properties that are affected by a resize
             OnPropertyChanged(nameof(Borderless));
             OnPropertyChanged(nameof(ResizeBorderThickness));
             OnPropertyChanged(nameof(OuterMarginSize));
