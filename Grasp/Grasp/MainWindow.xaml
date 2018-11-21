@@ -88,7 +88,7 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <!-- Topbar Buttons -->
-                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}" >
+                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}" ItemContainerStyleSelector="{StaticResource ItemStyleSelector}">
                                                 <!-- File -->
                                                 <MenuItem Style="{StaticResource TopbarMenuItem}" Header="File">
                                                     <MenuItem Header="New" Icon="/Resources/Images/Logo/logo.png">
