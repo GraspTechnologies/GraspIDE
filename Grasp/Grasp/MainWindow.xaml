@@ -88,10 +88,22 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <!-- Topbar Buttons -->
-                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}">
+                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}" >
                                                 <!-- File -->
                                                 <MenuItem Style="{StaticResource TopbarMenuItem}" Header="File">
-                                                    <MenuItem Header="New" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="New" Icon="/Resources/Images/Logo/logo.png">
+                                                        <MenuItem Header="Open" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Close" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
                                                     <MenuItem Header="Open" Icon="/Resources/Images/Logo/logo.png"/>
                                                     <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
                                                     <MenuItem Header="Add to Source Control" Icon="/Resources/Images/Logo/logo.png"/>

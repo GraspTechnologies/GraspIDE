@@ -28,4 +28,34 @@ C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Error Li
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Solutions\SolutionsControl.g.cs
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Error List\ErrorListControl.baml
 C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Controls\Solutions\SolutionsControl.baml
-C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\Grasp.csprojAssemblyReference.cache
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\bin\Debug\Grasp.exe.config
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\bin\Debug\Grasp.exe
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\bin\Debug\Grasp.pdb
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.csprojAssemblyReference.cache
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Editor\EditorControl.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Error List\ErrorListControl.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Solutions\SolutionsControl.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\App.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp_MarkupCompile.cache
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp_MarkupCompile.lref
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\App.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Editor\EditorControl.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Error List\ErrorListControl.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Controls\Solutions\SolutionsControl.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Styles\Windows.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Styles\Texts.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Styles\Buttons.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Styles\Colors.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Styles\Fonts.baml
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.g.resources
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.Properties.Resources.resources
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.csproj.GenerateResource.cache
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.csproj.CopyComplete
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.exe
+C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\Grasp.pdb

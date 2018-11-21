@@ -60,8 +60,8 @@
         <Setter Property="Margin" Value="0 6 0 6"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type MenuItem}">
-                    <Border x:Name="MainItem">
+                <ControlTemplate TargetType="{x:Type MenuItem}" x:Name="rootMenuItem">
+                    <Border x:Name="templateRoot">
                         <Grid VerticalAlignment="Center">
                             <ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" Margin="11 2 11 2"/>
                             <Popup x:Name="DropdownMenu" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
@@ -75,18 +75,59 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
-                            <Setter Property="Background" TargetName="MainItem" Value="{StaticResource HoverBrush}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource HoverBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type MenuItem}">
+    <Style TargetType="MenuItem" x:Key="MenuItemWithChildren">
+        <Setter Property="ItemContainerStyleSelector" Value="{StaticResource ItemStyleSelector}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MenuItem}">
-                    <Border x:Name="SubItem" Background="{StaticResource DropdownMenuBrush}">
+                    <Border x:Name="templateRoot" Background="{StaticResource DropdownMenuBrush}">
+                        <Grid Margin="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter x:Name="Icon" Grid.Column="0" Content="{TemplateBinding Icon}" ContentSource="Icon" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 4 10 4" Height="16" Width="16"/>
+                            <ContentPresenter Grid.Column="1" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
+                            <ContentPresenter Grid.Column="2" ContentTemplate="{TemplateBinding InputGestureText}" Content="{TemplateBinding InputGestureText}" ContentSource="InputGestureTextTemplate" TextBlock.Foreground="{StaticResource UnavailableTextBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
+                            <Popup x:Name="DropdownMenu" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right">
+                                <Border x:Name="SubMenuBorder" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
+                                    <Grid RenderOptions.ClearTypeHint="Enabled">
+                                        <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle"/>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Icon" Value="{x:Null}">
+                            <Setter Property="Visibility" TargetName="Icon" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource BlueBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{StaticResource UnavailableTextBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="MenuItem" x:Key="MenuItemWithoutChildren">
+        <Setter Property="ItemContainerStyleSelector" Value="{StaticResource ItemStyleSelector}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="templateRoot" Background="{StaticResource DropdownMenuBrush}">
                         <Grid Margin="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -112,18 +153,23 @@
                             <Setter Property="Visibility" TargetName="Icon" Value="Hidden"/>
                         </Trigger>
                         <Trigger Property="IsHighlighted" Value="True">
-                            <Setter Property="Background" TargetName="SubItem" Value="{StaticResource HoverBrush}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource BlueBrush}"/>
                         </Trigger>
                         <Trigger Property="IsSubmenuOpen" Value="True">
                             <Setter Property="Fill" TargetName="RightArrow" Value="{StaticResource BlueBrush}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="TextElement.Foreground" TargetName="SubItem" Value="{StaticResource UnavailableTextBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{StaticResource UnavailableTextBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <local:ItemStyleSelector x:Key="ItemStyleSelector" />
+    <Style TargetType="MenuItem">
+        <Setter Property="ItemContainerStyleSelector" Value="{StaticResource ItemStyleSelector}" />
     </Style>
 
     <Style TargetType="{x:Type Button}" x:Key="ToolbarButton" BasedOn="{StaticResource Hoverless}">
