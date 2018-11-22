@@ -7,6 +7,12 @@
         <ResourceDictionary Source="Fonts.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
+    <local:ItemStyleSelector x:Key="ItemStyleSelector" />
+    <Style TargetType="MenuItem">
+        <Setter Property="ItemContainerStyleSelector" Value="{StaticResource ItemStyleSelector}" />
+    </Style>
+
+
     <Style TargetType="{x:Type Button}" x:Key="Hoverless">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
@@ -167,10 +173,6 @@
         </Setter>
     </Style>
 
-    <local:ItemStyleSelector x:Key="ItemStyleSelector" />
-    <Style TargetType="MenuItem">
-        <Setter Property="ItemContainerStyleSelector" Value="{StaticResource ItemStyleSelector}" />
-    </Style>
 
     <Style TargetType="{x:Type Button}" x:Key="ToolbarButton" BasedOn="{StaticResource Hoverless}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
