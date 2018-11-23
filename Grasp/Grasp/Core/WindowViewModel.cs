@@ -45,7 +45,7 @@ namespace Grasp
 
         public int TitlebarHeight { get; set; } = 30;
 
-        public int TopbarHeight { get; set; } = 25;
+        public int TopbarHeight { get; set; } = 30;
 
         public int ToolbarHeight { get; set; } = 40;
 

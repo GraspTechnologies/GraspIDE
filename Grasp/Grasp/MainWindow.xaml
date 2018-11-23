@@ -134,29 +134,533 @@
                                                     <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
                                                 </MenuItem>
                                                 <!-- Edit -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Edit"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Edit">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- View -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="View"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="View">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Project -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Project"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Project">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Build -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Build"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Build">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Debug -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Debug"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Debug">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Task -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Task"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Task">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Team -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Team"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Team">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Tools -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Tools"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Tools">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Test -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Test"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Test">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Analyze -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Analyze"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Analyze">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Window -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Window"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Window">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                                 <!-- Help -->
-                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Help"/>
+                                                <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Help">
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
+                                                    <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                    <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
+                                                    <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
+                                                </MenuItem>
                                             </Menu>
                                         </Grid>
                                         <!-- Toolbar -->
