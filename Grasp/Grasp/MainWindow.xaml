@@ -88,39 +88,50 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <!-- Topbar Buttons -->
-                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}" ItemContainerStyleSelector="{StaticResource ItemStyleSelector}">
+                                            <Menu Grid.Column="0" Style="{StaticResource TopbarMenu}">
                                                 <!-- File -->
                                                 <MenuItem Style="{StaticResource TopbarMenuItem}" Header="File">
-                                                    <MenuItem Header="New" Icon="/Resources/Images/Logo/logo.png">
-                                                        <MenuItem Header="Open" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="New">
+                                                        <MenuItem Header="Open"/>
                                                         <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
-                                                        <MenuItem Header="Add to Source Control" Icon="/Resources/Images/Logo/logo.png"/>
-                                                        <MenuItem Header="Add" Icon="/Resources/Images/Logo/logo.png"/>
-                                                        <MenuItem Header="Close" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
                                                         <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
                                                         <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
-                                                        <MenuItem Header="Save WindowViewModel.xaml as..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
                                                         <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
-                                                        <MenuItem Header="Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
                                                         <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
                                                     </MenuItem>
-                                                    <MenuItem Header="Open" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Open">
+                                                        <MenuItem Header="Open"/>
+                                                        <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Add to Source Control"/>
+                                                        <MenuItem Header="Add"/>
+                                                        <MenuItem Header="Close"/>
+                                                        <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Save WindowViewModel.xaml as..."/>
+                                                        <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
+                                                        <MenuItem Header="Source Control"/>
+                                                        <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    </MenuItem>
                                                     <MenuItem Header="Start Page" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Add to Source Control" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Add" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Close" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Add to Source Control"/>
+                                                    <MenuItem Header="Add"/>
+                                                    <MenuItem Header="Close"/>
                                                     <MenuItem Header="Close Solution" InputGestureText="Ctr+Shift+W" Icon="/Resources/Images/Logo/logo.png"/>
                                                     <MenuItem Header="Save WindowViewModel.xaml" InputGestureText="Ctr+S" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Save WindowViewModel.xaml as..." Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Save WindowViewModel.xaml as..."/>
                                                     <MenuItem Header="Save All" InputGestureText="Ctr+Shift+S" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Source Control" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Source Control"/>
                                                     <MenuItem Header="Page Setup..." Icon="/Resources/Images/Logo/logo.png"/>
                                                     <MenuItem Header="Print..." InputGestureText="Ctr+P" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Save All" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Account Settings..." Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Recent Files" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Recent Projects and Solutions" Icon="/Resources/Images/Logo/logo.png"/>
-                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4" Icon="/Resources/Images/Logo/logo.png"/>
+                                                    <MenuItem Header="Account Settings..."/>
+                                                    <MenuItem Header="Recent Files"/>
+                                                    <MenuItem Header="Recent Projects and Solutions"/>
+                                                    <MenuItem Header="Exit" InputGestureText="Alt+F4"/>
                                                 </MenuItem>
                                                 <!-- Edit -->
                                                 <MenuItem Style="{StaticResource TopbarMenuItem}" Header="Edit"/>
@@ -168,9 +179,9 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <!-- Solutions -->
-                                            <local:SolutionsControl Grid.Column="0" Margin="0 10 0 0">
+                                            <local:SolutionsPanel Grid.Column="0" Margin="0 10 0 0">
 
-                                            </local:SolutionsControl>
+                                            </local:SolutionsPanel>
                                             <!-- Editor & Error List -->
                                             <Grid Grid.Column="1">
                                                 <Grid.RowDefinitions>
@@ -180,13 +191,13 @@
                                                     <RowDefinition Height="250"/>
                                                 </Grid.RowDefinitions>
                                                 <!-- Editor -->
-                                                <local:EditorControl Grid.Row="0" Margin="10 40 0 0">
+                                                <local:EditorPanel Grid.Row="0" Margin="10 40 0 0">
 
-                                                </local:EditorControl>
+                                                </local:EditorPanel>
                                                 <!-- Error List -->
-                                                <local:ErrorListControl Grid.Row="1" Margin="10 10 0 0">
+                                                <local:ErrorListPanel Grid.Row="1" Margin="10 10 0 0">
 
-                                                </local:ErrorListControl>
+                                                </local:ErrorListPanel>
                                             </Grid>
                                         </Grid>
                                     </Grid>

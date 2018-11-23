@@ -69,29 +69,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\Editor\EditorControl.xaml.cs">
-      <DependentUpon>EditorControl.xaml</DependentUpon>
+    <Compile Include="Panels\EditorPanel.xaml.cs">
+      <DependentUpon>EditorPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Error List\ErrorListControl.xaml.cs">
-      <DependentUpon>ErrorListControl.xaml</DependentUpon>
+    <Compile Include="Panels\ErrorListPanel.xaml.cs">
+      <DependentUpon>ErrorListPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Solutions\SolutionsControl.xaml.cs">
-      <DependentUpon>SolutionsControl.xaml</DependentUpon>
+    <Compile Include="Panels\SolutionsPanel.xaml.cs">
+      <DependentUpon>SolutionsPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\Base\BaseViewModel.cs" />
-    <Compile Include="ViewModel\Base\RelayCommand.cs" />
-    <Compile Include="ViewModel\ItemStyleSelector.cs" />
-    <Compile Include="ViewModel\WindowViewModel.cs" />
+    <Compile Include="Core\StyleSelectors\DropdownMenuItemStyleSelector.cs" />
+    <Compile Include="Core\Base\BaseViewModel.cs" />
+    <Compile Include="Core\Base\RelayCommand.cs" />
+    <Compile Include="Core\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
-    <Page Include="Controls\Editor\EditorControl.xaml">
+    <Page Include="Panels\EditorPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Error List\ErrorListControl.xaml">
+    <Page Include="Panels\ErrorListPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Solutions\SolutionsControl.xaml">
+    <Page Include="Panels\SolutionsPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

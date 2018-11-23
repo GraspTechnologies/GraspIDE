@@ -5,8 +5,9 @@
     <Color x:Key="BackgroundColor">#252831</Color>
     <Color x:Key="ForegroundColor">#31343f</Color>
     <Color x:Key="DropdownMenuColor">#22242c</Color>
-    <Color x:Key="BorderColor">#383b46</Color>
+    <Color x:Key="DropdownMenuHoverColor">#393a42</Color>
     <Color x:Key="HoverColor">#464953</Color>
+    <Color x:Key="BorderColor">#383b46</Color>
     <Color x:Key="UnavailableTextColor">#909090</Color>
     <Color x:Key="UnselectedScreenColor">#3f414c</Color>
     <Color x:Key="WhiteColor">#ffffff</Color>
@@ -15,8 +16,9 @@
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
     <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}"/>
     <SolidColorBrush x:Key="DropdownMenuBrush" Color="{StaticResource DropdownMenuColor}"/>
-    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
+    <SolidColorBrush x:Key="DropdownMenuHoverBrush" Color="{StaticResource DropdownMenuHoverColor}"/>
     <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
     <SolidColorBrush x:Key="UnavailableTextBrush" Color="{StaticResource UnavailableTextColor}"/>
     <SolidColorBrush x:Key="UnselectedScreenBrush" Color="{StaticResource UnselectedScreenColor}"/>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource WhiteColor}"/>

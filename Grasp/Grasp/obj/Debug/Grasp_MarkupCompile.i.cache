@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\obj\Debug\
+C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\obj\Debug\
 Grasp
 none
 false
 DEBUG;TRACE
-C:\Users\user\Documents\C++ Programs\WPF\Grasp 2.0\Grasp\App.xaml
-91010260534
+C:\Users\user\Documents\C++ Programs\WPF\Grasp\Grasp\App.xaml
+9-1134288156
 
-17-1129591195
-15-641603426
-Controls\Editor\EditorControl.xaml;Controls\Error List\ErrorListControl.xaml;Controls\Solutions\SolutionsControl.xaml;MainWindow.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+17-145497247
+151161885895
+Panels\EditorPanel.xaml;Panels\ErrorListPanel.xaml;Panels\SolutionsPanel.xaml;MainWindow.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
 True
 
