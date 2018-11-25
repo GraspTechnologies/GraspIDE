@@ -23,6 +23,8 @@ namespace Grasp
 
         private string mRestoreButtonMode;
 
+        private string mDropdownMenuBorderMargin;
+
         /// <summary>
         /// The last known dock position
         /// </summary>
@@ -67,6 +69,15 @@ namespace Grasp
                 ? mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png" 
                 : mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore_fullscreen.png";
             set => mRestoreButtonMode = value;
+        }
+
+        /// <summary>
+        /// Fixes the DropdownMenu horizontal offset problem when the window is maximized, and the DropdownMenu has a DropShadow effect
+        /// </summary>
+        public string DropdownMenuBorderMargin
+        {
+            get => mWindow.WindowState == WindowState.Maximized ? mDropdownMenuBorderMargin = "0 5 5 5" : mDropdownMenuBorderMargin = "5 5 5 5";
+            set => mDropdownMenuBorderMargin = value;
         }
 
         public Thickness ResizeBorderThickness => new Thickness(ResizeBorder + OuterMarginSize);
@@ -138,6 +149,7 @@ namespace Grasp
             OnPropertyChanged(nameof(OuterMarginSize));
             OnPropertyChanged(nameof(OuterMarginSizeThickness));
             OnPropertyChanged(nameof(RestoreButtonMode));
+            OnPropertyChanged(nameof(DropdownMenuBorderMargin));
         }
         #endregion
     }

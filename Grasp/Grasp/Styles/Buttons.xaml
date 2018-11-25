@@ -65,9 +65,14 @@
                 <ControlTemplate TargetType="{x:Type MenuItem}" x:Name="rootMenuItem">
                     <Border x:Name="templateRoot">
                         <Grid VerticalAlignment="Center">
-                            <ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" Margin="11 2 11 2"/>
-                            <Popup x:Name="DropdownMenu" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
-                                <Border x:Name="SubMenuBorder" Background="{StaticResource DropdownMenuBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" Margin="11 2 11 2"/>
+                            </Border>
+                            <Popup x:Name="DropdownMenu" AllowsTransparency="True" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
+                                <Border BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" Margin="{Binding DropdownMenuBorderMargin}">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="7" Opacity="0.7"/>
+                                    </Border.Effect>
                                     <Grid RenderOptions.ClearTypeHint="Enabled">
                                         <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle"/>
                                     </Grid>
@@ -78,6 +83,9 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="True">
                             <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource HoverBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsSubmenuOpen" Value="True">
+                            <Setter Property="Background" TargetName="templateRoot" Value="{StaticResource DropdownMenuBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -101,8 +109,11 @@
                             <ContentPresenter Grid.Column="1" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
                             <ContentPresenter Grid.Column="2" ContentTemplate="{TemplateBinding InputGestureText}" Content="{TemplateBinding InputGestureText}" ContentSource="InputGestureTextTemplate" TextBlock.Foreground="{StaticResource UnavailableTextBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
                             <Path x:Name="RightArrow" Grid.Column="3" Data="M0 0L4 3.5 0 7z" Fill="{StaticResource WhiteBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
-                            <Popup x:Name="DropdownMenu" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right">
-                                <Border x:Name="SubMenuBorder" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
+                            <Popup x:Name="DropdownMenu" AllowsTransparency="True" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right" VerticalOffset="-2">
+                                <Border BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" Margin="5 5 5 5">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="7" Opacity="0.7"/>
+                                    </Border.Effect>
                                     <Grid RenderOptions.ClearTypeHint="Enabled">
                                         <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle"/>
                                     </Grid>
@@ -143,13 +154,6 @@
                             <ContentPresenter x:Name="Icon" Grid.Column="0" Content="{TemplateBinding Icon}" ContentSource="Icon" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 4 10 4" Height="16" Width="16"/>
                             <ContentPresenter Grid.Column="1" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
                             <ContentPresenter Grid.Column="2" ContentTemplate="{TemplateBinding InputGestureText}" Content="{TemplateBinding InputGestureText}" ContentSource="InputGestureTextTemplate" TextBlock.Foreground="{StaticResource UnavailableTextBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0"/>
-                            <Popup x:Name="DropdownMenu" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right">
-                                <Border x:Name="SubMenuBorder" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
-                                    <Grid RenderOptions.ClearTypeHint="Enabled">
-                                        <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle"/>
-                                    </Grid>
-                                </Border>
-                            </Popup>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
