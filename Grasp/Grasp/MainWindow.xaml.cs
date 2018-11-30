@@ -11,7 +11,7 @@ namespace Grasp
         {
             InitializeComponent();
 
-            this.DataContext = new WindowViewModel(this);
+            DataContext = new WindowViewModel(this);
         }
     }
 }
