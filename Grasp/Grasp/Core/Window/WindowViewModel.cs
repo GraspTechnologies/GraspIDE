@@ -66,8 +66,8 @@ namespace Grasp
         public string RestoreButtonMode
         {
             get => mWindow.WindowState == WindowState.Maximized
-                ? mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore.png"
-                : mRestoreButtonMode = "/Resources/Images/Buttons/Window Buttons/WindowButton-restore_fullscreen.png";
+                ? mRestoreButtonMode = DI.ViewModelIconPaths.WindowButton_Restore_Icon
+                : mRestoreButtonMode = DI.ViewModelIconPaths.WindowButton_RestoreFullscreen_Icon;
             set => mRestoreButtonMode = value;
         }
 

@@ -17,7 +17,7 @@ namespace Grasp
         /// <summary>
         /// The application view model
         /// </summary>
-        public static IconPathsViewModel IconPathsViewModel => ViewModelIconPaths;
+        public IconPathsViewModel IconPathsViewModel => ViewModelIconPaths;
 
         #endregion
     }
