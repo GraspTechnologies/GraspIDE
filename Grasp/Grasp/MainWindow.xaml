@@ -11,7 +11,7 @@
         x:Name="AppWindow"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
-        Title="Grasp IDE 2019" Width="1280" Height="768">
+        Title="{Binding AppTitle}" Width="1280" Height="768">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -47,7 +47,7 @@
                                         </Grid.ColumnDefinitions>
                                         <!-- Icon -->
                                         <Grid Grid.Column="0">
-                                            <Image Source="{Binding IconPathsViewModel.App_Icon, Source={x:Static local:ViewModelLocator.Instance}}" RenderOptions.BitmapScalingMode="Fant" Margin="5"/>
+                                            <Image Source="{Binding Icons.App_Icon, Source={x:Static local:ClassLocator.Instance}}" RenderOptions.BitmapScalingMode="Fant" Margin="5"/>
                                         </Grid>
                                         <!-- Title -->
                                         <Grid Grid.Column="1">
@@ -57,7 +57,7 @@
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                                             <!-- Minimize -->
                                             <Button Style="{StaticResource WindowControlButton}" Command="{Binding MinimizeCommand}">
-                                                <Image Source="/Resources/Images/Buttons/Window Buttons/WindowButton-minimize.png"/>
+                                                <Image Source="{Binding Icons.WindowButton_Minimize_Icon, Source={x:Static local:ClassLocator.Instance}}"/>
                                             </Button>
                                             <!-- Restore -->
                                             <Button Style="{StaticResource WindowControlButton}" Command="{Binding RestoreCommand}">
@@ -65,7 +65,7 @@
                                             </Button>
                                             <!-- Close -->
                                             <Button Style="{StaticResource WindowCloseButton}" Command="{Binding CloseCommand}">
-                                                <Image Source="/Resources/Images/Buttons/Window Buttons/WindowButton-close.png"/>
+                                                <Image Source="{Binding Icons.WindowButton_Close_Icon, Source={x:Static local:ClassLocator.Instance}}"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>

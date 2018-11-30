@@ -7,9 +7,6 @@ namespace Grasp
     /// </summary>
     public partial class EditorPanel : UserControl
     {
-        public EditorPanel()
-        {
-            InitializeComponent();
-        }
+        public EditorPanel() => InitializeComponent();
     }
 }

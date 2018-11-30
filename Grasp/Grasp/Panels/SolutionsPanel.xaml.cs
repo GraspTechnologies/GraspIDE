@@ -7,9 +7,6 @@ namespace Grasp
     /// </summary>
     public partial class SolutionsPanel : UserControl
     {
-        public SolutionsPanel()
-        {
-            InitializeComponent();
-        }
+        public SolutionsPanel() => InitializeComponent();
     }
 }

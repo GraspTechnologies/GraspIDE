@@ -7,9 +7,6 @@ namespace Grasp
     /// </summary>
     public partial class ErrorListPanel : UserControl
     {
-        public ErrorListPanel()
-        {
-            InitializeComponent();
-        }
+        public ErrorListPanel() => InitializeComponent();
     }
 }

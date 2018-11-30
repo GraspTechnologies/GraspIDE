@@ -32,7 +32,7 @@ namespace Grasp
         {
             // Setup the Dna Framework
             Framework.Construct<DefaultFrameworkConstruction>()
-                .AddGraspViewModels()
+                .AddGraspClasses()
                 .Build();
         }
     }

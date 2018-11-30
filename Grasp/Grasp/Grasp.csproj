@@ -135,10 +135,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Dependency Injection\ClassLocator.cs" />
     <Compile Include="Core\Dependency Injection\DI.cs" />
     <Compile Include="Core\Dependency Injection\FrameworkConstructionExtensions.cs" />
-    <Compile Include="Core\Dependency Injection\ViewModelLocator.cs" />
-    <Compile Include="DataModels\IconPathsViewModel.cs" />
+    <Compile Include="Core\Data Models\Icons.cs" />
+    <Compile Include="Core\Data Models\MainWindowProperties.cs" />
     <Compile Include="Panels\EditorPanel.xaml.cs">
       <DependentUpon>EditorPanel.xaml</DependentUpon>
     </Compile>

@@ -32,24 +32,26 @@ namespace Grasp
         #endregion
 
         #region Public Properties
-        public int WindowMinimumWidth { get; set; } = 1280;
+        public string AppTitle { get; set; } = DI.MainWindowPropertiesDataModel.App_Title;
 
-        public int WindowMinimumHeight { get; set; } = 768;
+        public int WindowMinimumWidth { get; set; } = DI.MainWindowPropertiesDataModel.Window_Minimum_Width;
+
+        public int WindowMinimumHeight { get; set; } = DI.MainWindowPropertiesDataModel.Window_Minimum_Height;
 
         /// <summary>
         /// The Window is borderless when it is maximized or when it is docked
         /// </summary>
         public bool Borderless => mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked;
 
-        public int ResizeBorder { get; set; } = 0;
+        public int ResizeBorder { get; set; } = DI.MainWindowPropertiesDataModel.Resize_Border;
 
-        public int SeparatorHeight { get; set; } = 1;
+        public int SeparatorHeight { get; set; } = DI.MainWindowPropertiesDataModel.Separator_Height;
 
-        public int TitlebarHeight { get; set; } = 30;
+        public int TitlebarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Titlebar_Height;
 
-        public int TopbarHeight { get; set; } = 30;
+        public int TopbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Topbar_Height;
 
-        public int ToolbarHeight { get; set; } = 40;
+        public int ToolbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Toolbar_Height;
 
         /// <summary>
         /// The margin around the window which allows for a drop shadow
@@ -66,8 +68,8 @@ namespace Grasp
         public string RestoreButtonMode
         {
             get => mWindow.WindowState == WindowState.Maximized
-                ? mRestoreButtonMode = DI.ViewModelIconPaths.WindowButton_Restore_Icon
-                : mRestoreButtonMode = DI.ViewModelIconPaths.WindowButton_RestoreFullscreen_Icon;
+                ? mRestoreButtonMode = DI.IconsDataModel.WindowButton_Restore_Icon
+                : mRestoreButtonMode = DI.IconsDataModel.WindowButton_RestoreFullscreen_Icon;
             set => mRestoreButtonMode = value;
         }
 
