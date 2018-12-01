@@ -19,7 +19,7 @@ namespace Grasp
         /// </summary>
         private WindowResizer mWindowResizer;
 
-        private int mOuterMarginSize = 10;
+        private int mOuterMarginSize = DI.MainWindowPropertiesDataModel.Outer_Margin_Size;
 
         private string mRestoreButtonMode;
 
@@ -43,13 +43,11 @@ namespace Grasp
         /// </summary>
         public bool Borderless => mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked;
 
-        public int ResizeBorder { get; set; } = DI.MainWindowPropertiesDataModel.Resize_Border;
-
-        public int SeparatorHeight { get; set; } = DI.MainWindowPropertiesDataModel.Separator_Height;
-
         public int TitlebarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Titlebar_Height;
 
         public int TopbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Topbar_Height;
+
+        public int SeparatorHeight { get; set; } = DI.MainWindowPropertiesDataModel.Separator_Height;
 
         public int ToolbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Toolbar_Height;
 
@@ -82,13 +80,13 @@ namespace Grasp
             set => mDropdownMenuBorderMargin = value;
         }
 
-        public Thickness ResizeBorderThickness => new Thickness(ResizeBorder + OuterMarginSize);
+        public Thickness ResizeBorderThickness => new Thickness(OuterMarginSize);
 
         public Thickness OuterMarginSizeThickness => new Thickness(OuterMarginSize);
 
         public GridLength SeparatorHeightGridLength => new GridLength(SeparatorHeight);
 
-        public GridLength TitlebarHeightGridLength => new GridLength(TitlebarHeight + ResizeBorder);
+        public GridLength TitlebarHeightGridLength => new GridLength(TitlebarHeight);
 
         public GridLength TopbarHeightGridLength => new GridLength(TopbarHeight);
 
