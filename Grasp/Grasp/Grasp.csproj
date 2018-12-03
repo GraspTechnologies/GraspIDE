@@ -135,11 +135,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Core\Dependency Injection\ClassLocator.cs" />
+    <Compile Include="Core\Animation\AnimationSlideInDirection.cs" />
+    <Compile Include="Core\Animation\FrameworkElementAnimationAttachedProperties.cs" />
+    <Compile Include="Core\Animation\FrameworkElementAnimations.cs" />
+    <Compile Include="Core\Animation\StoryboardHelpers.cs" />
+    <Compile Include="Core\Base\BaseAttachedProperty.cs" />
     <Compile Include="Core\Dependency Injection\DI.cs" />
     <Compile Include="Core\Dependency Injection\FrameworkConstructionExtensions.cs" />
     <Compile Include="Core\Data Models\Icons.cs" />
-    <Compile Include="Core\Data Models\MainWindowProperties.cs" />
+    <Compile Include="Core\Dependency Injection\ServiceLocator.cs" />
+    <Compile Include="Core\Window\WindowProperties.cs" />
     <Compile Include="Panels\EditorPanel.xaml.cs">
       <DependentUpon>EditorPanel.xaml</DependentUpon>
     </Compile>
@@ -242,7 +247,6 @@
   <ItemGroup>
     <Resource Include="Resources\Images\Buttons\Window Buttons\WindowButton-restore_fullscreen.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

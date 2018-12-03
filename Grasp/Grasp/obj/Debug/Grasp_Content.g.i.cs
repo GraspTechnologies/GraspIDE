@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/buttons/window%20buttons/windowbutton-close1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/buttons/window%20buttons/windowbutton-minimize1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/buttons/window%20buttons/windowbutton-restore1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon1.ico")]
 
 

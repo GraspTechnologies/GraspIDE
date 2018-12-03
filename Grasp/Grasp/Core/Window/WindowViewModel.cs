@@ -19,10 +19,19 @@ namespace Grasp
         /// </summary>
         private WindowResizer mWindowResizer;
 
-        private int mOuterMarginSize = DI.MainWindowPropertiesDataModel.Outer_Margin_Size;
+        /// <summary>
+        /// Outer margin size of MainWindow
+        /// </summary>
+        private int mOuterMarginSize = DI.WindowPropertiesDataModel.Outer_Margin_Size;
 
+        /// <summary>
+        /// The RestoreButton's mode according to the window's state
+        /// </summary>
         private string mRestoreButtonMode;
 
+        /// <summary>
+        /// Fixes the DropdownMenu horizontal offset problem when the window is maximized, and the DropdownMenu has a DropShadow effect
+        /// </summary>
         private string mDropdownMenuBorderMargin;
 
         /// <summary>
@@ -32,24 +41,61 @@ namespace Grasp
         #endregion
 
         #region Public Properties
-        public string AppTitle { get; set; } = DI.MainWindowPropertiesDataModel.App_Title;
+        /// <summary>
+        /// Application title
+        /// </summary>
+        public string AppTitle { get; set; } = DI.WindowPropertiesDataModel.App_Title;
 
-        public int WindowMinimumWidth { get; set; } = DI.MainWindowPropertiesDataModel.Window_Minimum_Width;
+        /// <summary>
+        /// The color of the dimmed overlay when the window is not on focus
+        /// </summary>
+        public string OutOfFocusDimmedOverlayColor { get; set; } = DI.WindowPropertiesDataModel.Out_Of_Focus_Dimmed_Overlay_Color;
 
-        public int WindowMinimumHeight { get; set; } = DI.MainWindowPropertiesDataModel.Window_Minimum_Height;
+        /// <summary>
+        /// The opacity of the dimmed overlay when the window is not on focus
+        /// </summary>
+        public double OutOfFocusDimmedOverlayOpacity { get; set; } = DI.WindowPropertiesDataModel.Out_Of_Focus_Dimmed_Overlay_Opacity;
+
+        /// <summary>
+        /// Minimum width of MainWindow
+        /// </summary>
+        public int WindowMinimumWidth { get; set; } = DI.WindowPropertiesDataModel.Window_Minimum_Width;
+
+        /// <summary>
+        /// Minimum height of MainWindow
+        /// </summary>
+        public int WindowMinimumHeight { get; set; } = DI.WindowPropertiesDataModel.Window_Minimum_Height;
+
+        /// <summary>
+        /// True if we should have a dimmed overlay on the window
+        /// such as when a popup is visible or the window is not focused
+        /// </summary>
+        public bool DimmableOverlayVisible { get; set; }
 
         /// <summary>
         /// The Window is borderless when it is maximized or when it is docked
         /// </summary>
         public bool Borderless => mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked;
 
-        public int TitlebarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Titlebar_Height;
+        /// <summary>
+        /// The height of the Titlebar
+        /// </summary>
+        public int TitlebarHeight { get; set; } = DI.WindowPropertiesDataModel.Titlebar_Height;
 
-        public int TopbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Topbar_Height;
+        /// <summary>
+        /// The height of the Topbar
+        /// </summary>
+        public int TopbarHeight { get; set; } = DI.WindowPropertiesDataModel.Topbar_Height;
 
-        public int SeparatorHeight { get; set; } = DI.MainWindowPropertiesDataModel.Separator_Height;
+        /// <summary>
+        /// The height of the Separator
+        /// </summary>
+        public int SeparatorHeight { get; set; } = DI.WindowPropertiesDataModel.Separator_Height;
 
-        public int ToolbarHeight { get; set; } = DI.MainWindowPropertiesDataModel.Toolbar_Height;
+        /// <summary>
+        /// The height of the Toolbar
+        /// </summary>
+        public int ToolbarHeight { get; set; } = DI.WindowPropertiesDataModel.Toolbar_Height;
 
         /// <summary>
         /// The margin around the window which allows for a drop shadow

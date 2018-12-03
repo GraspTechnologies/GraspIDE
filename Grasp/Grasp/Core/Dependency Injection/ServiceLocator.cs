@@ -1,19 +1,19 @@
 ﻿namespace Grasp
 {
     /// <summary>
-    /// Locates classes from the IoC for use in binding in XAML files
+    /// Locates services from the IoC for use in binding in XAML files
     /// </summary>
-    public class ClassLocator
+    public class ServiceLocator
     {
         /// <summary>
         /// Singleton instance of the locator
         /// </summary>
-        public static ClassLocator Instance { get; private set; } = new ClassLocator();
+        public static ServiceLocator Instance { get; private set; } = new ServiceLocator();
 
         /// <summary>
-        /// The DataModel for the MainWindow properties
+        /// The DataModel for the window properties
         /// </summary>
-        public MainWindowProperties MainWindowProperties => DI.MainWindowPropertiesDataModel;
+        public WindowProperties WindowProperties => DI.WindowPropertiesDataModel;
 
         /// <summary>
         /// The DataModel for the icons

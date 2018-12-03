@@ -3,12 +3,22 @@
     /// <summary>
     /// DataModel that contains MainWindow properties
     /// </summary>
-    public class MainWindowProperties
+    public class WindowProperties
     {
         /// <summary>
         /// Application title
         /// </summary>
         public string App_Title { get; set; } = "Grasp IDE 2019";
+
+        /// <summary>
+        /// The color of the dimmed overlay when the window is not on focus
+        /// </summary>
+        public string Out_Of_Focus_Dimmed_Overlay_Color { get; set; } = "#000000";
+
+        /// <summary>
+        /// The opacity of the dimmed overlay when the window is not on focus
+        /// </summary>
+        public double Out_Of_Focus_Dimmed_Overlay_Opacity { get; set; } = 0.35;
 
         /// <summary>
         /// Outer margin size of MainWindow

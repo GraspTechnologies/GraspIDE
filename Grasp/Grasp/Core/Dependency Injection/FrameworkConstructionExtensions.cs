@@ -9,14 +9,14 @@ namespace Grasp
     public static class FrameworkConstructionExtensions
     {
         /// <summary>
-        /// Injects the classes needed for the application
+        /// Injects the services needed for the application
         /// </summary>
         /// <param name="construction"></param>
         /// <returns></returns>
         public static FrameworkConstruction AddGraspClasses(this FrameworkConstruction construction)
         {
-            // Bind to a single instance of MainWindowPropertiesDataModel
-            construction.Services.AddSingleton<MainWindowProperties>();
+            // Bind to a single instance of WindowPropertiesDataModel
+            construction.Services.AddSingleton<WindowProperties>();
 
             // Bind to a single instance of IconsDataModel
             construction.Services.AddSingleton<Icons>();

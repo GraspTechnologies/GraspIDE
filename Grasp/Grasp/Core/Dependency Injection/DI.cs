@@ -8,9 +8,9 @@ namespace Grasp
     public static class DI
     {
         /// <summary>
-        /// A shortcut to access the <see cref="MainWindowProperties"/>
+        /// A shortcut to access the <see cref="WindowProperties"/>
         /// </summary>
-        public static MainWindowProperties MainWindowPropertiesDataModel => Framework.Service<MainWindowProperties>();
+        public static WindowProperties WindowPropertiesDataModel => Framework.Service<WindowProperties>();
 
         /// <summary>
         /// A shortcut to access the <see cref="Icons"/>
