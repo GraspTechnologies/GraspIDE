@@ -11,7 +11,7 @@
         <ControlTemplate TargetType="UserControl">
             <Border Background="{StaticResource ForegroundBrush}">
                 <Grid>
-
+                    <TextBox Margin="5" Background="Transparent" BorderThickness="0" AcceptsReturn="True" FontSize="16" FontFamily="{StaticResource SegoeUI}" Foreground="White" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextOptions.TextFormattingMode="Display" TextOptions.TextRenderingMode="ClearType"/>
                 </Grid>
             </Border>
         </ControlTemplate>

@@ -4,8 +4,13 @@
 
     <Color x:Key="BackgroundColor">#252831</Color>
     <Color x:Key="ForegroundColor">#31343f</Color>
+    <Color x:Key="OutOfFocusDimmedOverlayColor">#000000</Color>
     <Color x:Key="DropdownMenuColor">#22242c</Color>
     <Color x:Key="DropdownMenuHoverColor">#393a42</Color>
+    <Color x:Key="ScrollColor">#8a8d95</Color>
+    <Color x:Key="ScrollHoverColor">#adafb5</Color>
+    <Color x:Key="ScrollDragColor">#dcdddf</Color>
+    <Color x:Key="ScrollBarColor">#4e525c</Color>
     <Color x:Key="HoverColor">#464953</Color>
     <Color x:Key="BorderColor">#383b46</Color>
     <Color x:Key="UnavailableTextColor">#909090</Color>
@@ -15,8 +20,13 @@
 
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
     <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}"/>
+    <SolidColorBrush x:Key="OutOfFocusDimmedOverlayBrush" Color="{StaticResource OutOfFocusDimmedOverlayColor}"/>
     <SolidColorBrush x:Key="DropdownMenuBrush" Color="{StaticResource DropdownMenuColor}"/>
     <SolidColorBrush x:Key="DropdownMenuHoverBrush" Color="{StaticResource DropdownMenuHoverColor}"/>
+    <SolidColorBrush x:Key="ScrollBrush" Color="{StaticResource ScrollColor}"/>
+    <SolidColorBrush x:Key="ScrollHoverBrush" Color="{StaticResource ScrollHoverColor}"/>
+    <SolidColorBrush x:Key="ScrollDragBrush" Color="{StaticResource ScrollDragColor}"/>
+    <SolidColorBrush x:Key="ScrollBarBrush" Color="{StaticResource ScrollBarColor}"/>
     <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}"/>
     <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
     <SolidColorBrush x:Key="UnavailableTextBrush" Color="{StaticResource UnavailableTextColor}"/>

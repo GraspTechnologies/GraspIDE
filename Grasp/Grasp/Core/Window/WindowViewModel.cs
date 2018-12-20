@@ -22,7 +22,7 @@ namespace Grasp
         /// <summary>
         /// Outer margin size of MainWindow
         /// </summary>
-        private int mOuterMarginSize = DI.WindowPropertiesDataModel.Outer_Margin_Size;
+        private int mOuterMarginSize;
 
         /// <summary>
         /// The RestoreButton's mode according to the window's state
@@ -47,14 +47,14 @@ namespace Grasp
         public string AppTitle { get; set; } = DI.WindowPropertiesDataModel.App_Title;
 
         /// <summary>
-        /// The color of the dimmed overlay when the window is not on focus
-        /// </summary>
-        public string OutOfFocusDimmedOverlayColor { get; set; } = DI.WindowPropertiesDataModel.Out_Of_Focus_Dimmed_Overlay_Color;
-
-        /// <summary>
         /// The opacity of the dimmed overlay when the window is not on focus
         /// </summary>
         public double OutOfFocusDimmedOverlayOpacity { get; set; } = DI.WindowPropertiesDataModel.Out_Of_Focus_Dimmed_Overlay_Opacity;
+
+        /// <summary>
+        /// The opacity of the MainWindow's dropshadow
+        /// </summary>
+        public double WindowDropshadowOpacity { get; set; } = DI.WindowPropertiesDataModel.Window_Dropshadow_Opacity;
 
         /// <summary>
         /// Minimum width of MainWindow
@@ -98,11 +98,11 @@ namespace Grasp
         public int ToolbarHeight { get; set; } = DI.WindowPropertiesDataModel.Toolbar_Height;
 
         /// <summary>
-        /// The margin around the window which allows for a drop shadow
+        /// Outer margin size of MainWindow
         /// </summary>
         public int OuterMarginSize
         {
-            get => mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize;
+            get => mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize = DI.WindowPropertiesDataModel.Outer_Margin_Size;
             set => mOuterMarginSize = value;
         }
 

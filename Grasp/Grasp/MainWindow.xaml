@@ -25,12 +25,12 @@
                             <Grid>
                                 <!-- Dimmed overlay -->
                                 <Border Panel.ZIndex="10" Opacity="{Binding OutOfFocusDimmedOverlayOpacity}">
-                                    <Border Background="{Binding OutOfFocusDimmedOverlayColor}" local:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}"/>
+                                    <Border Background="{StaticResource OutOfFocusDimmedOverlayBrush}" local:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}"/>
                                 </Border>
                                 <!-- Window border & dropshadow -->
                                 <Border Background="{StaticResource BackgroundBrush}">
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="{Binding WindowDropshadowOpacity}"/>
                                     </Border.Effect>
                                 </Border>
                                 <!-- Main window content -->
@@ -184,11 +184,11 @@
                                                     <RowDefinition Height="250"/>
                                                 </Grid.RowDefinitions>
                                                 <!-- Editor -->
-                                                <local:EditorPanel Grid.Row="0" Margin="10 40 0 0">
+                                                <local:EditorPanel Grid.Row="0" Margin="10 40 20 0">
 
                                                 </local:EditorPanel>
                                                 <!-- Error List -->
-                                                <local:ErrorListPanel Grid.Row="1" Margin="10 10 0 0">
+                                                <local:ErrorListPanel Grid.Row="1" Margin="10 10 20 0">
 
                                                 </local:ErrorListPanel>
                                             </Grid>

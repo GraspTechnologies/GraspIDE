@@ -11,14 +11,14 @@
         public string App_Title { get; set; } = "Grasp IDE 2019";
 
         /// <summary>
-        /// The color of the dimmed overlay when the window is not on focus
-        /// </summary>
-        public string Out_Of_Focus_Dimmed_Overlay_Color { get; set; } = "#000000";
-
-        /// <summary>
         /// The opacity of the dimmed overlay when the window is not on focus
         /// </summary>
-        public double Out_Of_Focus_Dimmed_Overlay_Opacity { get; set; } = 0.35;
+        public double Out_Of_Focus_Dimmed_Overlay_Opacity { get; set; } = 0.5;
+
+        /// <summary>
+        /// The opacity of the MainWindow's dropshadow
+        /// </summary>
+        public double Window_Dropshadow_Opacity { get; set; } = 0.3;
 
         /// <summary>
         /// Outer margin size of MainWindow
