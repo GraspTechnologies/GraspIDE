@@ -16,5 +16,10 @@ namespace Grasp
         /// A shortcut to access the <see cref="Icons"/>
         /// </summary>
         public static Icons IconsDataModel => Framework.Service<Icons>();
+
+        /// <summary>
+        /// A shortcut to access the <see cref="PathGeometryData"/>
+        /// </summary>
+        public static PathGeometryData PathGeometryDataDataModel => Framework.Service<PathGeometryData>();
     }
 }

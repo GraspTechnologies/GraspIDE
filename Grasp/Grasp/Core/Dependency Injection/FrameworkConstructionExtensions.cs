@@ -21,6 +21,9 @@ namespace Grasp
             // Bind to a single instance of IconsDataModel
             construction.Services.AddSingleton<Icons>();
 
+            // Bind to a single instance of PathGeometryDataDataModel
+            construction.Services.AddSingleton<PathGeometryData>();
+
             // Return the construction for chaining
             return construction;
         }

@@ -140,6 +140,7 @@
     <Compile Include="Core\Animation\FrameworkElementAnimations.cs" />
     <Compile Include="Core\Animation\StoryboardHelpers.cs" />
     <Compile Include="Core\Base\BaseAttachedProperty.cs" />
+    <Compile Include="Core\Data Models\PathGeometryData.cs" />
     <Compile Include="Core\Dependency Injection\DI.cs" />
     <Compile Include="Core\Dependency Injection\FrameworkConstructionExtensions.cs" />
     <Compile Include="Core\Data Models\Icons.cs" />

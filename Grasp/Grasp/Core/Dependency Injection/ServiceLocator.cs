@@ -19,5 +19,10 @@
         /// The DataModel for the icons
         /// </summary>
         public Icons Icons => DI.IconsDataModel;
+
+        /// <summary>
+        /// The DataModel for the path geometry data
+        /// </summary>
+        public PathGeometryData PathGeometryData => DI.PathGeometryDataDataModel;
     }
 }
