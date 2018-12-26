@@ -13,7 +13,7 @@
         /// <summary>
         /// The opacity of the dimmed overlay when the window is not on focus
         /// </summary>
-        public double Out_Of_Focus_Dimmed_Overlay_Opacity { get; set; } = 0.35;
+        public double Out_Of_Focus_Dimmed_Overlay_Opacity { get; set; } = 0.5;
 
         /// <summary>
         /// The opacity of the MainWindow's dropshadow
